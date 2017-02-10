@@ -1,3 +1,4 @@
+/* jshint esversion:6 */
 "use strict";
 
 // Request widely used modules
@@ -17,7 +18,7 @@ const spawn = require('child_process').spawn;
 var otp, photon, otp_stream, photon_stream, timestamp = Date.now();
 
 if (config.otp.enable) {
-    fs.open(path.join(config.log.path, timestamp.toString() + '.otp.txt'), 'w', function (err, fd) {
+    fs.open(path.join(config.log.path, timestamp.toString() + '.otp.log'), 'w', function (err, fd) {
         if (err)
             console.error(err);
 
@@ -47,7 +48,7 @@ if (config.otp.enable) {
 }
 
 if (config.photon.enable) {
-    fs.open(path.join(config.log.path, timestamp.toString() + '.photon.txt'), 'w', function (err, fd) {
+    fs.open(path.join(config.log.path, timestamp.toString() + '.photon.log'), 'w', function (err, fd) {
         if (err)
             console.error(err);
 

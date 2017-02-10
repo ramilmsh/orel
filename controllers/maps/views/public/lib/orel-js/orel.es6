@@ -1,3 +1,5 @@
+/* jshint esversion:6 */
+
 (function (window, document, console) {
 
     class Interface {
@@ -49,7 +51,7 @@
 
         constructor() {
         }
-        
+
         getMap() {
             if (Importer.supported("webgl"))
                 Importer.import("mapboxgl");

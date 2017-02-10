@@ -1,12 +1,14 @@
+/* jshint esversion: 6 */
+
 /** @module Tile */
 (function () {
     "use strict";
     var MBTiles = require('mbtiles'),
-        mbgl = require('mapbox-gl-native'),
+        path = require('path'),
+        mbgl = require(path.join(__homedir, 'utils/mapbox-gl-native')),
         SphericalMercator = require('sphericalmercator'),
         sharp = require('sharp'),
         fs = require('fs'),
-        path = require('path'),
         zlib = require('zlib'),
         url = require('url'),
         advancedPool = require('advanced-pool'),
@@ -56,7 +58,7 @@
             // For every source provided, create raster and vector renderer
             for (var source in config.data) {
 
-                new MBTiles(path.join(__homedir, config.data[source]), function (err, mbtiles) {
+                new MBTiles(path.join(__homedir, config.data[source]), (err, mbtiles) => {
                     if (err)
                         throw new Error(err);
 
@@ -68,17 +70,17 @@
 
                         var _styleJSON = Object.assign({}, styleJSON),
                             _tileJSON = {tiles: config.vector_tiles};
-                        _tileJSON['name'] = source;
-                        _tileJSON['format'] = 'pbf';
+                        _tileJSON.name = source;
+                        _tileJSON.format = "pbf";
 
                         _tileJSON = Object.assign({}, _tileJSON, data);
 
-                        _tileJSON['tilejson'] = '2.0.0';
-                        _tileJSON['basename'] = source;
-                        delete _tileJSON['scheme'];
+                        _tileJSON.tilejson = "2.0.0";
+                        _tileJSON.basename = source;
+                        delete _tileJSON.scheme;
 
                         _styleJSON.sources.mapbox = _tileJSON;
-                        _styleJSON.sources.mapbox.type = 'vector';
+                        _styleJSON.sources.mapbox.type = "vector";
                         _styleJSON.sprite = config.sprites + config.style;
                         _styleJSON.glyphs = config.glyphs;
 
@@ -239,10 +241,10 @@
         switch (method) {
             case Tile.READ_CACHE:
                 try {
-                    var buffer = fs.readFileSync(path.join(__dirname, 'cache',
+                    buffer = fs.readFileSync(path.join(__dirname, 'cache',
                         (params.type === Tile.RASTER) ? 'raster' : 'vector',
-                        params.z.toString(), params.x.toString(), params.y.toString()
-                        + ((params.scale > 1) ? '@' + params.scale + 'x' : '') + '.' + params.format));
+                        params.z.toString(), params.x.toString(), params.y.toString() +
+                        ((params.scale > 1) ? '@' + params.scale + 'x' : '') + '.' + params.format));
 
                     return buffer;
                 } catch (e) {
