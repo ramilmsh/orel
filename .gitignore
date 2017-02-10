@@ -35,3 +35,20 @@ jspm_packages
 
 # Optional REPL history
 .node_repl_history
+
+# Cache from tiles
+controllers/tiles/views/tiles/cache
+
+# Raw data
+data
+
+# Utilities
+utils/
+
+# Machine-specific configurations
+config/global.json
+config/tiles.json
+*config.json
+
+# MacOS DS_Store files
+*.DS_Store

@@ -1,0 +1,23 @@
+{
+  "name": "global",
+
+  "HOST": "127.0.0.1",
+  "PORT": 3000,
+
+  "PG_PROTOCOL": "postgres",
+  "PG_HOST": "127.0.1.0",
+  "PG_PORT": "5432",
+  "PG_USER": "",
+  "PG_PASS": "",
+  "PG_DB": "",
+
+  "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
+  "XML_STYLE": "osm.xml",
+  "FONTDIR": "./fonts",
+  "FONTDIR_RECURSE": true,
+
+  "OTP_URL": "127.0.0.1",
+  "OTP_PORT": 4000,
+  "OTP_JAR": "",
+  "OTP_ROUTERS": [""]
+}

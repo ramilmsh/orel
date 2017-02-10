@@ -1,0 +1,39 @@
+{
+  "name": "orel",
+  "version": "0.0.1",
+  "description": "## About The aim of this project is to provide a core for a self-sufficient gis web service.",
+  "main": "app.js",
+  "dependencies": {
+    "body-parser": "",
+    "express": "",
+    "mapnik": "",
+    "pg": "",
+    "pug": "",
+    "request": "",
+    "sphericalmercator": ""
+  },
+  "devDependencies": {
+    "babel-cli": "^6.14.0",
+    "babel-core": "^6.14.0",
+    "babel-preset-es2015": "^6.14.0",
+    "jasmine": "^2.5.2",
+    "jasmine-core": "^2.5.2",
+    "karma": "^1.3.0",
+    "karma-jasmine": "^1.0.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/ramilmsh/guidam.git"
+  },
+  "keywords": [
+    "gis",
+    "guidam",
+    "mapnik"
+  ],
+  "author": "Ramil Shaymardanov",
+  "license": "MIT",
+  "homepage": "https://bitbucket.org/ramilmsh/guidam#readme"
+}

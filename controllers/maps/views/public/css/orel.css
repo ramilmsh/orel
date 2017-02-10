@@ -1,0 +1,120 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+.sep {
+    clear: both;
+}
+
+.txt-inp {
+    line-height: 30px;
+    border: 0;
+    outline: 0;
+    padding: 5px;
+}
+
+.point {
+
+}
+
+.orel-search-wrapper {
+    position: absolute;
+    width: 300px;
+    height: 40px;
+    z-index: 3;
+}
+
+.orel-directions-wrapper {
+    position: absolute;
+    z-index: 3;
+}
+
+.orel-map-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+.orel-wrapper {
+    position: relative;
+    width: 900px;
+    height: 700px;
+    /*Leaflet made its map with z-index:400 ...*/
+    z-index: 1;
+}
+
+.orel-marker {
+    width: 10px;
+    height: 10px;
+    background: red;
+    background-size: cover;
+    border-radius: 50%;
+    z-index: 1000;
+}
+
+.orel-point-data-box {
+    width: 250px;
+    line-height: 20px;
+    position: absolute;
+    padding: 10px 0;
+    left: 50%;
+    bottom: 5px;
+    margin-left: -125px;
+    background-color: #149662;
+    color: #fff;
+    text-align: center;
+    border-radius: 2%;
+    box-shadow: 0 0 5px #149662;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.orel-feature-wrapper {
+    cursor: pointer;
+    min-width: 250px;
+    padding: 10px 0;
+    background-color: #149662;
+    color: #fff;
+    text-align: left;
+    border-radius: 2%;
+    box-shadow: 0 0 5px #149662;
+    margin-top: 5px;
+    font-family: Tahoma;
+    z-index: 3;
+}
+
+.orel-feature-wrapper p:first-child {
+    line-height: 25px;
+    margin: 0 20px;
+    font-size: 14px;
+}
+
+.orel-feature-wrapper p:last-child {
+    line-height: 20px;
+    margin: 0 20px;
+    color: #ccc;
+    font-size: 12px;
+}
+
+.orel-feature-list-wrapper {
+    z-index: 1000;
+    position: absolute;
+    top: 45px;
+    left: 10px;
+}
+
+.searchBox {
+    position: relative;
+    left: 0px;
+}
+
+#dir-btn {
+    position: relative;
+    left: 0px;
+}
+
+#dir-btn:hover {
+    cursor: pointer;
+}

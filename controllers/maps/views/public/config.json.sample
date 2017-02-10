@@ -1,0 +1,11 @@
+{
+  "center": {
+    "lat": 0,
+    "lon": 0
+  },
+  "zoom": 0,
+  "zoomBnd": [0, 20],
+  "extent": null,
+  "tileURL": "[domain name]/{z}/{x}/{y}.png",
+  "searchBar": 1
+}
