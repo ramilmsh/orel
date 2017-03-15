@@ -1,0 +1,27 @@
+{
+  "name": "orel",
+  "version": "0.0.2",
+  "description": " ",
+  "main": "src/app.ts",
+  "dependencies": {
+    "express": "^4.15.2"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-typescript": "^3.1.5",
+    "typescript": "^2.2.1"
+  },
+  "scripts": {
+    "test": " "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ramilmsh/orel.git"
+  },
+  "author": "Ramil Shaymardanov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ramilmsh/orel/issues"
+  },
+  "homepage": "https://github.com/ramilmsh/orel#readme"
+}
