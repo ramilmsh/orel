@@ -1,11 +1,12 @@
 import * as express from "express";
 import * as http from "http";
-import {tiles} from "./tiles";
+
+import { controller } from "./controller";
 
 let app: express.Application = express(),
     server: http.Server = http.createServer(app);
 
-app.use("/tiles", tiles.handler);
+app.use("/", controller.handler);
 
 server.listen(3000);
 

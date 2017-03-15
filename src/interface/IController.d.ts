@@ -1,7 +1,7 @@
 import * as express from "express";
 
-interface IHandler {
+interface IController {
     handler: express.Router;
 }
 
-export default IHandler;
+export default IController;
