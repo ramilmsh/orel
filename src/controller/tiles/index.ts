@@ -2,8 +2,8 @@ import * as express from "express";
 import * as path from "path";
 import * as bodyParser from "body-parser";
 
-import { Config, inject } from "utils/injection";
-import IController from "interface/IController";
+import { Config, inject } from "src/utils/injection";
+import IController from "src/interface/IController";
 
 @inject
 class Tiles implements IController {

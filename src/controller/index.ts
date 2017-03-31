@@ -1,6 +1,6 @@
 import * as express from "express";
 
-import IController from "interface/IController";
+import IController from "src/interface/IController";
 import { tiles } from "./tiles";
 
 class Controller implements IController {

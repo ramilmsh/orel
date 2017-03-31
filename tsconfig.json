@@ -2,10 +2,8 @@
   "compilerOptions": {
     "target": "es6",
     "module": "commonjs",
-    "outDir": "dist",
-
-    "baseUrl": "./src",
-    "rootDirs": ["src"],
+    "baseUrl": ".",
+    "outDir": "dist/src",
 
     "experimentalDecorators": true
   },
